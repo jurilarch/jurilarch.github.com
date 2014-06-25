@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bruteforce</title>
+
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,200,400,700,900' rel='stylesheet' type='text/css'>
+
+	<!-- JS -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+	
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+
+	<!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Charset -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+	
+	<!-- CSS -->
+	
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$("body").hide().delay(100).fadeIn(400);
+		});
+	</script>
+	
+	<script>
+		function getData(){
+			$.ajax({url: 'data.txt',
+					success : function(html) {
+								$( "#content" ).html(html);
+							}
+					});
+		}
+		
+		getData()
+		setInterval(getData(), 2000);
+	</script>
+
+	<style type="text/css">
+
+		*{
+			margin: 0 auto;
+			padding: 0;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-webkit-appearance: none;
+			box-sizing: border-box;
+			border-radius: 0;
+			text-decoration: none;
+			list-style-type: none;
+			font-family: 'Lato';
+
+			/*
+			color: white;*/
+		}
+
+		:focus {outline:none;}
+
+		::selection {
+			background: #FEB0B6; /* Safari */
+		}
+
+		::-moz-selection {
+			background: #FEB0B6; /* Firefox */
+		}
+
+		html{
+		
+		}
+		
+		#main{
+			width:500px;
+			margin: auto;
+			margin-top: 2em;
+			font-size: 1.2rem;
+			padding: 1em;
+			border-radius: 10px;
+		}
+		
+		#main h1{
+			font-size: 6rem;
+			margin-bottom: 0.5em;
+			font-weight: 300;
+			text-align: center;
+		}
+		
+		.container {
+			width : 100%;
+			margin: 0px auto;
+			padding: 0;
+		}
+		#label{
+			margin-bottom:5px;
+			background: #1ABC9C;
+			color: #fff;
+			border-radius: 100%;
+			width : 30px;
+			height : 30px;
+			line-height : 30px;
+			font-size: 1.5rem;
+			position:relative;
+			text-align : center;
+		}
+		
+		#erg{
+			text-align: center;
+		}
+		
+	</style>
+	
+	<script>
+		$( document ).ready(function() {
+			$(':checkbox').checkbox();
+			
+			
+			var initialValue=8, min=2, max=14;
+			var $slider = $("#slider");
+
+			if ($slider.length > 0) {
+			  $slider.slider({
+				min: min,
+				max: max,
+				value: initialValue,
+				orientation: "horizontal",
+				range: "min",
+				slide: function( event, ui ) {
+				  $("#label").text(ui.value);
+				  $("#label").css("margin-left", (ui.value-min)/(max-min)*100+"%");
+				  $("#label").css("left", "-15px");
+				}
+			  }).addSliderSegments($slider.slider("option").max);
+			}
+		});
+	</script>
+	
+	<script>
+		function start(){
+			var len = $( "#slider" ).slider( "value" );
+			var pws = $( "#speed" ).val();
+			var klein = $("#checkbox1").attr('checked');
+			var gros = $("#checkbox2").attr('checked');
+			var zahl = $("#checkbox3").attr('checked');
+			
+			var zeichen = 0;
+			if(klein == "checked")zeichen+=26;
+			if(gros == "checked")zeichen+=26;
+			if(zahl == "checked")zeichen+=10;
+			
+			var comb = Math.pow(zeichen, len);
+			
+			var time = comb/pws;
+			
+			var years = time/60/60/24/365;
+			var days = (years - Math.floor(years))*365;
+			years = Math.floor(years);
+			var hours = (days - Math.floor(days))*24;
+			days = Math.floor(days);
+			var mins = (hours - Math.floor(hours))*60;
+			hours = Math.floor(hours);
+			var secs = (mins - Math.floor(mins))*60;
+			mins = Math.floor(mins);
+			secs = Math.round(secs);
+			
+			var erg = years + " Jahre " + days + " Tage " + hours + " Stunden " + mins + " Minuten " + secs + " Sekunden";
+			
+			$('#erg').text(erg);
+		}
+	</script>
+</head>
+<body>
+	<div id = "main">
+		<h1>Brute-Force</h1>
+		<div class="container">
+			<span style="font-size: 2rem;">Länge:</span>
+			<div id="label">8</div>
+			<div id="slider" class="ui-slider"></div>
+		</div>
+		<div class="form-group">
+		  <div class="input-group">
+			<span class="input-group-addon">Geschwindigkeit:</span>
+			<input type="text" class="form-control" placeholder="pw/s" id="speed" value="1000000"/>
+		  </div> 
+		</div>
+		<label class="checkbox" for="checkbox1">
+		  <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+		  Kleinbuchstaben
+		</label>
+		<label class="checkbox" for="checkbox2">
+		  <input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
+		  Großbuchstaben
+		</label>
+		<label class="checkbox" for="checkbox3">
+		  <input type="checkbox" value="" id="checkbox3" data-toggle="checkbox">
+		  Zahlen
+		</label>
+		<button class="btn btn-primary btn-wide" onclick="start()" style="margin: auto;display: block;">
+		  Start
+		</button>
+	</div>
+	<h3 id ="erg"></h3>
+	
+	
+</body>
+
+
+</html>
