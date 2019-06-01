@@ -315,7 +315,7 @@ footer {
   background-color: #FBFFA3;
   background-color: #363636;
   font-family: 'Source Sans Pro', sans-serif;
-  text-transform: uppercase;
+  text-transform: lowercase;
   h1{
     font-weight: 900;
     font-size: 2.6rem;
@@ -323,6 +323,7 @@ footer {
   }
 
   ul{
+    text-transform: uppercase;
 
     list-style: none;
     margin-top: 2rem;
@@ -355,7 +356,7 @@ footer {
         }
       }
       a:hover{
-        
+
       }
     }
   }

@@ -4,7 +4,8 @@
 
 html, body {
   height: 100%;
-  background-color: #FBFFA3; }
+  background-color: #FBFFA3;
+}
 
 #titlecontainer {
   background-color: #DEE2D1;
@@ -217,12 +218,13 @@ footer {
   background-color: #FBFFA3;
   background-color: #363636;
   font-family: 'Source Sans Pro', sans-serif;
-  text-transform: uppercase; }
+  text-transform: lowercase; }
   footer h1 {
     font-weight: 900;
     font-size: 2.6rem;
     color: #fefefe; }
   footer ul {
+    text-transform: uppercase;
     list-style: none;
     margin-top: 2rem; }
     footer ul li {
