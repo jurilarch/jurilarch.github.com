@@ -10,65 +10,65 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 		<!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
-<!--		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css' -->
-    <link rel="stylesheet" type="text/css" href="affogato.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 
-    <!-- JQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <script src="js/sbecky.js"></script>
 
-    <script src="js/sbecky.js"></script>
+        <script type="text/javascript">
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+              e.preventDefault();
 
-    <script type="text/javascript">
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+              });
+            });
           });
-        });
-      });
-      </script>
+        </script>
 
     </head>
     <body>
 
-    <div id = "titlecontainer">
-
-      <div id = "title">
-        <div class = "tile"></div>
-        <div id="name"><span>JURI LARCH</span></div>
-      </div>
-
-      <ul>
-        <li><a href = "#aboutme" >about.</a></li>
-        <li><a href = "#content" >create.</a></li>
-      </ul>
-
-      <a id="explore" href="#aboutme">explore.</a>
+    <div id="side">
+        <div>J</div>
+        <div>U</div>
+        <div>R</div>
+        <div>I</div>
+        <div class="spacer"></div>
+        <div>L</div>
+        <div>A</div>
+        <div>R</div>
+        <div>C</div>
+        <div>H</div>
     </div>
 
-    <div id="aboutme">
+    <div id = "titlecontainer">
+        <div id="name"><span>J</span>uri Larch</div>
+    </div>
+
+    <!-- <div id="aboutme">
       <h1>about.</h1>
       <p>
-        My name is Juri.<br />
-        <!-- I'm a 22-year-old student from South Tyrol (North Italy).<br/> -->
         I'm a member of <a href="http://twysvn.com">Twentyseven</a><br/>
-        Check out some of my <a href="#content">work</a>.
       </p>
-    </div>
+    </div> -->
 
     <div id="content">
-      <h1>create.</h1>
-
-
+      <!-- <h1>work.</h1> -->
+      <div class="item item_image">
+        <img sb-async-src="img/feed/18.jpg" />
+        <p>Pflerscher Tribulaun.</p>
+      </div>
+      <div class="item item_image">
+        <img sb-async-src="img/feed/17.jpg" />
+        <p>Graz.</p>
+      </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/16.jpg" />
-        <p><a href="https://www.instagram.com/p/BzU9GUjoC86/">Instagram</a></p>
+        <p><a href="https://www.instagram.com/p/BzU9GUjoC86/">Pfitsch.</a></p>
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/15.jpg" />
@@ -80,7 +80,7 @@
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/13.jpg" />
-        <p>Geislergruppe. <a href="https://www.instagram.com/p/BaRmQdcjb3z/?utm_source=ig_web_copy_link">Instagram</a></p>
+        <p><a href="https://www.instagram.com/p/BaRmQdcjb3z/?utm_source=ig_web_copy_link">Geislergruppe.</a></p>
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/12.jpg" />
@@ -88,23 +88,23 @@
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/11.jpg" />
-        <p><a href="https://www.instagram.com/p/BXc_or4DbrG/?taken-by=jurilarch">Instagram</a></p>
+        <p><a href="https://www.instagram.com/p/BXc_or4DbrG/?taken-by=jurilarch">Ridnaun.</a></p>
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/10.jpg" />
-        <p><a href="https://www.instagram.com/p/BN2QeG7AYUS/?taken-by=twysvn">Instagram</a></p>
+        <p><a href="https://www.instagram.com/p/BN2QeG7AYUS/?taken-by=twysvn">Instagram.</a></p>
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/9.png" />
-        <p><a href="http://twysvn.com/orbit">Orbit</a></p>
+        <p><a href="http://twysvn.com/orbit">Orbit.</a></p>
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/8.jpg" />
-        <p><a href="https://www.instagram.com/p/BO4szwJh0NR/?taken-by=jurilarch">Instagram</a></p>
+        <p><a href="https://www.instagram.com/p/BO4szwJh0NR/?taken-by=jurilarch">Instagram.</a></p>
       </div>
       <div class="item item_image">
         <img sb-async-src="img/feed/7.jpg" />
-        <p><a href="https://www.instagram.com/p/BE5xTMgML-a/?taken-by=jurilarch">Instagram</a></p>
+        <p><a href="https://www.instagram.com/p/BE5xTMgML-a/?taken-by=jurilarch">Instagram.</a></p>
       </div>
       <!-- <div class="item item_image">
         <img sb-async-src="img/feed/6.jpg" />
@@ -112,7 +112,7 @@
       </div> -->
       <div class="item item_image">
         <img sb-async-src="img/feed/5.jpg" />
-        <p><a href="https://www.instagram.com/p/BBnnl7lML-n/?taken-by=jurilarch">Instagram</a></p>
+        <p><a href="https://www.instagram.com/p/BBnnl7lML-n/?taken-by=jurilarch">Instagram.</a></p>
       </div>
       <!--<div class="item item_image">
         <img sb-async-src="img/feed/4.jpg" />
@@ -122,10 +122,10 @@
         <img sb-async-src="img/feed/3.jpg" />
         <p><a href="https://www.instagram.com/p/BAEuS09MLxC/?taken-by=jurilarch">Instagram</a></p>
       </div>-->
-      <div class="item item_image">
+      <!-- <div class="item item_image">
         <img sb-async-src="img/feed/2.jpg" />
-        <p><a href="https://www.instagram.com/p/_Cb8LmMLy6/?taken-by=jurilarch">Instagram</a></p>
-      </div>
+        <p><a href="https://www.instagram.com/p/_Cb8LmMLy6/?taken-by=jurilarch">Instagram.</a></p>
+      </div> -->
       <!-- <div class="item item_image">
         <img sb-async-src="img/feed/1.jpg" />
         <p><a href="http://instagram.com/jurilarch">Instagram</a></p>
@@ -136,8 +136,8 @@
 
 
     <footer>
-      <!--<a href="mailto:hi@jurilarch.com">hi@jurilarch.com</a>-->
-      <h1>Find me on.</h1>
+        © 2020 Juri Larch
+      <!-- <h1>Find me on.</h1>
 
       <ul>
         <li>
@@ -149,8 +149,8 @@
           <a target="_blank" href = "https://twitter.com/jurilarch">
             <span id="twitter">Twitter:</span> @jurilarch
           </a>
-        </li> -->
-      </ul>
+      </li> --.>
+      </ul> -->
     </footer>
   </body>
 </html>
