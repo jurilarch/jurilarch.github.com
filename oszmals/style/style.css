@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #464d55;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #2f3439;
+}
+header #logo {
+  justify-content: flex-start;
+}
+header #logo a {
+  display: block;
+}
+header #logo a img {
+  display: block;
+  max-height: 3rem;
+  padding: 0.6rem;
+}
+header div {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+}
+header div:first-child > div {
+  margin-right: auto;
+}
+header div:last-child > * {
+  margin-left: auto;
+}
+header div div {
+  display: block;
+  text-align: left;
+  padding: 1rem;
+}
+header div ul {
+  list-style: none;
+  display: flex;
+}
+header div ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 1rem;
+  display: block;
+}
+header div ul li a img {
+  display: block;
+  height: 1.4em;
+}
+header div ul li a:hover {
+  background: #1d1f23;
+}
+
+#title {
+  background-image: url("../img/titleback.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-top: 5rem;
+}
+#title div {
+  background-color: rgba(38, 42, 46, 0.9);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+}
+#title div img {
+  max-width: 20rem;
+  display: block;
+  padding-bottom: 2rem;
+}
+#title div ul {
+  display: inline-block;
+  list-style: none;
+}
+#title div ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border: solid 2px rgba(255, 255, 255, 0);
+}
+#title div ul li a:hover {
+  border-color: #fff;
+  background: #2f3439;
+  box-shadow: 0 0 5px 0px rgba(70, 77, 85, 0.3);
+}
+
+#title2 {
+  display: flex;
+  background-color: #d9dce0;
+  justify-content: center;
+}
+#title2 div {
+  margin: 8rem 2rem;
+  max-width: 50rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px 0px rgba(70, 77, 85, 0.3);
+}
+#title2 #titleback {
+  background-image: url("../img/titleback.jpg");
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+  margin-left: 0;
+}
+#title2 #overview {
+  background-color: #5d6671;
+  background-color: white;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 4rem;
+}
+#title2 #overview img {
+  max-width: 20rem;
+  display: block;
+  padding-bottom: 1rem;
+}
+#title2 #overview ul {
+  display: inline-block;
+  list-style: none;
+}
+#title2 #overview ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border: solid 2px rgba(255, 255, 255, 0);
+  color: #111;
+}
+#title2 #overview ul li a:hover {
+  border-color: #fff;
+  border-color: #464d55;
+  background: #e4e6e9;
+  box-shadow: 0 0 5px 0px rgba(70, 77, 85, 0.3);
+}
+
+#second {
+  padding: 10rem 1rem;
+}
+#second h1 {
+  font-size: 3em;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+#second p {
+  text-align: center;
+}
+
+#third {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  max-width: 76rem;
+}
+#third div {
+  padding: 8rem 2rem;
+  width: 50%;
+}
+#third div ul {
+  margin-top: 2rem;
+  display: block;
+  list-style: none;
+}
+#third div ul li:before {
+  content: "-";
+  margin-right: 0.2rem;
+}
+#third div:first-of-type {
+  background-color: #1488ca;
+}
+#third div:first-of-type h1 {
+  padding: 1rem;
+}
+#third div:first-of-type ul {
+  padding-left: 2rem;
+}
+#third #menschn {
+  background-image: url("../img/menschn.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#third #overlaylogo {
+  position: absolute;
+  width: 18vw;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#sponsors {
+  padding: 5rem 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 0 0px 10px 0px #464d55;
+}
+#sponsors div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+#sponsors div img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 20rem;
+}
+
+footer {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+footer ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+}
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  header div ul li {
+    font-size: 0.8em;
+  }
+  header div ul li a {
+    padding: 0.5rem;
+  }
+  header #moremenu {
+    display: none;
+  }
+
+  #title2 {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  #title2 div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #title2 div img {
+    width: 100%;
+  }
+  #title2 #titleback {
+    height: 50vh;
+  }
+
+  #third {
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+  #third div {
+    position: relative;
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+  #third div #overlaylogo {
+    top: auto;
+    bottom: -20vw;
+    width: 40vw;
+    z-index: 2;
+  }
+  #third #menschn {
+    height: 50vh;
+  }
+
+  #sponsors {
+    flex-direction: column;
+  }
+}

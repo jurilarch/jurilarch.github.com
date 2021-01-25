@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oberschulzentrum Mals</title>
+
+        <!-- Responsive -->
+        <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">
+
+        <!-- Charset -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+
+        <script type="text/javascript">
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <a href="#"><img src="img/logo-osz-mals.png" alt=""></a>
+            </div>
+            <div class="">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Schule
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Infopoint
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Kontakt
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="moremenu">
+                <ul>
+                    <li><a href="#"><img src="img/icons/book.svg"/></a></li>
+                    <li><a href="#"><img src="img/icons/email.svg"/></a></li>
+                    <li><a href="#"><img src="img/icons/calendar.svg"/></a></li>
+                    <li><a href="#"><img src="img/icons/mortarboard.svg"/></a></li>
+                    <li><a href="#"><img src="img/icons/facebook.svg"/></a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="title2">
+            <div id="overview">
+                <img src="img/OSZ_Logo_SPORT_01.png" alt="">
+                <ul>
+                    <li><a href="#">Was erwartet mich</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Schul- und Trainingsplan</a></li>
+                    <li><a href="#">Stundentafel</a></li>
+                    <li><a href="#">Einschreibung</a></li>
+                    <li><a href="#">Sportzeitung</a></li>
+                    <li><a href="#">Sponsoren und Partner</a></li>
+                </ul>
+            </div>
+            <div id="titleback"></div>
+        </section>
+        <section id="second">
+            <h1>Nothing is impossible.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        <section id="third">
+            <div class="">
+                <h1>Die Sportoberschule bildet in den folgenden Disziplinen aus:</h1>
+                <ul>
+                    <li>Ski Alpin</li>
+                    <li>SkiCross</li>
+                    <li>Biathlon</li>
+                    <li>Langlauf</li>
+                    <li>Rodeln/Naturbahn</li>
+                    <li>Rodeln/Kunstbahn</li>
+                    <li>Snowboard</li>
+                    <li>Snowboardcross</li>
+                </ul>
+                <img src="img/osz_logo-icon_1.png" id="overlaylogo"></img>
+            </div>
+            <div id="menschn"></div>
+        </section>
+        <section id="sponsors">
+            <div><img src="img/sponsorn1.png" alt=""></div>
+            <div><img src="img/sponsorn2.svg" alt=""></div>
+            <div><img src="img/sponsorn3.png" alt=""></div>
+            <div><img src="img/sponsorn4.png" alt=""></div>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Impressum</a></li>
+            </ul>
+        </footer>
+        <script type="text/javascript">
+            var height = document.getElementsByTagName('header')[0].offsetHeight;
+            document.getElementById('title').style.paddingTop = height + 'px';
+        </script>
+        <script type="text/javascript">
+            var height = document.getElementsByTagName('header')[0].offsetHeight;
+            document.getElementById('title2').style.paddingTop = height + 'px';
+        </script>
+    </body>
+</html>
